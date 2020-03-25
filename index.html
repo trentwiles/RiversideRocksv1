@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <title>Riverside Rocks</title>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/CSS-Mint/2.0.7/css-mint.min.css"
+  />
+    <link
+    rel="icon"
+    type="image/png"
+    href="https://cdn.glitch.com/bf0767d5-0a69-4254-b815-2eafc67edd33%2FScreenshot%202020-01-18%20at%2011.47.23%20AM.png?v=1581255936266"
+  />
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154738521-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154738521-3');
+</script>
+
+  <header class="cm-header inverted">
+    <div class="cm-logo cm-text-large">
+      <a
+        href="#"
+        style="font-size:55px;padding:7px;line-height:-25px;margin:29px;height:200px;"
+        >Riverside Rocks</a
+      >
+    </div>
+    <nav class="cm-nav">
+      <ul>
+        <li>
+          <button
+            style="background-color:black;font-size:30px;text-decoration:none;border:none;display:inline-block;font-size:24px;"
+          >
+            <a
+              href="#"
+              style="font-size:30px;text-decoration:none;border:none;display:inline-block;padding:12px;font-size:24px;"
+              >Home</a
+            >
+          </button>
+        </li>
+        <li>
+        <button style="background-color:black;font-size:30px;text-decoration:none;border:none;display:inline-block;font-size:24px;">
+              <a href="#main" style="font-size:30px;text-decoration:none;border:none;display:inline-block;padding:12px;font-size:24px;">About</a>
+           </button>
+        </li>
+                <li>
+          <button
+            style="background-color:black;font-size:30px;text-decoration:none;border:none;display:inline-block;font-size:24px;"
+          >
+            <a
+              href="#work"
+              style="font-size:30px;text-decoration:none;border:none;display:inline-block;padding:12px;font-size:24px;"
+              >Projects</a
+            >
+          </button>
+        </li>
+                <li>
+        <button style="background-color:black;font-size:30px;text-decoration:none;border:none;display:inline-block;font-size:24px;">
+              <a href="#contact" style="font-size:30px;text-decoration:none;border:none;display:inline-block;padding:12px;font-size:24px;">Contact</a>
+           </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#fullScreenDiv{
+    width:100%;
+    min-height: 100%; 
+   /* Set the height to match that of the viewport. */
+    height: 100vh;
+    width: auto;
+    padding:0!important;
+    margin: 0!important;
+    background-color: gray;
+    position: relative;
+}
+#video{    
+    width: 100vw; 
+    height: auto;
+    object-fit: cover;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #video{
+    height: 150%;
+    top: -100%;
+  }
+  #videosubstitute{
+    display:block;
+    width: 100%;
+    height: auto;}
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #video {
+    width: 150%;
+    left: -100%;
+  }
+  #videosubstitute{display:block;width:auto;height:100%;}
+}
+/*if there is 992  pixels or more, then display the video but hide the image*/
+@media only screen and (min-width : 992px) {
+#video{display:block;}
+#videosubstitute{display:none}
+}   
+
+/* The container for our text and stuff */
+#messageBox{
+    position: absolute;  top: 0;  left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+    font-size: 30px;
+  color: black;
+}
+    #space{
+      background-color: black;
+      width: 100%;
+      height: 10%;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    html {
+  scroll-behavior: smooth;
+}
+  </style>
+    <div id="fullScreenDiv">
+        <div id="videoDiv">           
+            <video id="video" autoplay loop muted>
+            <source src="https://cdn.glitch.com/c6e2fb68-b6fa-497a-8990-4961d0f7a112%2FPexels%20Videos%202128568.mp4?v=1584472807956" type="video/mp4"></source>
+            </video> 
+        </div>
+        <div id="messageBox"> 
+            <div>
+                <h1 style="font-size:50px;">Riverside Rocks</h1>
+                <h2 style="color: #323131;">Building tomorrow's Internet, today.</h2>
+                <h3><a href="#main" class="scrolly">Read More...</a></h3>
+            </div>
+        </div>   
+  <br>
+    </div>
+    <div id="fullScreenDiv">
+        <div id="videoDiv">           
+            <video id="video" autoplay loop muted>
+            <source src="https://cdn.glitch.com/c6e2fb68-b6fa-497a-8990-4961d0f7a112%2FPexels%20Videos%203457.mp4?v=1584475220131" type="video/mp4"></source>
+            </video> 
+        </div>
+        <div id="messageBox"> 
+            <div>
+              <br>
+              <br>
+              <br id="main">
+              <br>
+              <br>
+                <h1>What we do</h1>
+              <br>
+                   <h3>
+                     Riverside Rocks is the Internet invovation company. We work
+                     <br>
+                     <br>
+                     to make the interent a better and more entertained place. 
+                     <br>
+                     <br>
+                     <br>
+                     <a href="#contact">Why not join us?</a>
+              </h3>
+                   <br>
+              
+        </div>  
+    </div>
+<div id="fullScreenDiv">
+        <div id="videoDiv">           
+            <video id="video" autoplay loop muted>
+            <source src="https://cdn.glitch.com/c6e2fb68-b6fa-497a-8990-4961d0f7a112%2FAerial%20Shot%20Of%20Snowy%20Mountain.mp4?v=1584476250291" type="video/mp4"></source>
+            </video> 
+        </div>
+        <div id="messageBox"> 
+            <div>
+              <br>
+              <br id="work">
+              <br>
+              <br>
+              <br>
+                <h1>Our work</h1>
+                   <ul>
+                     <li><strong>DHHS News</strong></li>
+                     <br>
+                     About: DHHS News is the unoffical school news website that 
+                     <br>
+                     <br>
+                     delivers news to DHHS students and parents. 
+                     <br>
+                     <br>
+                     <strong><a href="https://dhhsnews.riverside.rocks" target="_blank">View</a></strong>
+                     <br>
+                     <br>
+                     <li><strong>Riverside Rocks for Developers (Beta)</strong></li>
+                     <br>
+                     About: Riverside Rocks for Developers is a code reference center,
+                     <br>
+                     <br>
+                     built with developers in mind. 
+                     <br>
+                     <br>
+                     <strong>Coming Soon</strong>
+                                          <br>
+                     <br>
+                     <li><strong>Riverside Rocks Youtube</strong></li>
+                     <br>
+                     About: The Riverside Rocks Youtube channel is the place where the
+                     <br>
+                     <br>
+                     developers of Riverside Rocks share experiences in their lives with
+                     <br>
+                     <br>
+                     viewers. 
+                     <br>
+                     <br>
+                     <strong><a href="https://www.youtube.com/riversiderocks" target="_blank">View</a></strong>
+                  </ul>
+                   <br>
+              
+        </div>  
+    </div>
+<div id="fullScreenDiv">
+        <div id="videoDiv">           
+            <video id="video" autoplay loop muted>
+            <source src="https://cdn.glitch.com/c6e2fb68-b6fa-497a-8990-4961d0f7a112%2FPexels%20Videos%202544523.mp4?v=1584475528181" type="video/mp4"></source>
+            </video> 
+        </div>
+        <div id="messageBox"> 
+            <div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+                <h1 id="contact" style="color:white;">Get in touch</h1>
+              <h2 style="color:white;">
+                Contact us to ask about our work or partnership requests
+              </h2>
+              <br>
+              <br>
+              <button>
+                <a href="mailto:trent@riverside.rocks">Contact us</a>
+              </button>
+              <br>
+              <br>
+              <h2 style="color:white;">
+                Or you can read our <a href="https://riverside.rocks/blog">blog</a>.
+              </h2>
+                   
+        </div>  
+    </div>
+<div id="space">
+  <br>
+    2020 Riverside Rocks - <a href="https://dhhsnews.riverside.rocks">DHHS News</a> - <a href="https://riverside.rocks/blog">Blog</a> - <a href="https://youtube.com/riversiderocks">Youtube</a> - <a href="https://policies.riverside.rocks">Terms/Privacy</a>
+</div>
+<script type="text/javascript">
+<!--
+if (screen.width <= 699) {
+document.location = "https://m.riverside.rocks";
+}
+//-->
+</script>
+</html>
