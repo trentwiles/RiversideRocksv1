@@ -7,6 +7,6 @@ You can view this project live at [riverside.rocks](https://riverside.rocks).
 
 Do you see a way that the website could be made better? Fork this project and submit a pull request when done!
 
-# What about a Developer Website?
+# What about a Developer/Docs Website?
 
-Our Developer website will be here soon.
+Our Developer website will be here soon. We are currently working on documentation on how to use Riverside Rocks services.
