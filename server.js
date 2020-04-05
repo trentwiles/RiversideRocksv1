@@ -1,4 +1,5 @@
-// init project
+// JUST A HEADS UP:
+// This file does nothing because i dont have nodejs installed :(
 var express = require('express');
 var app = express();
 
