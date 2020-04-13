@@ -10,3 +10,9 @@ Do you see a way that the website could be made better? Fork this project and su
 # What about a Developer/Docs Website?
 
 Our Developer website will be here soon. We are currently working on documentation on how to use Riverside Rocks services.
+
+# Other projects that I run:
+
+- ScriptingToSaveLives.com (COVID-19 Charity)
+- DHHS News (News Website)
+  - dhhsnews.riverside.rocks
