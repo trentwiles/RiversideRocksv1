@@ -18,6 +18,10 @@ app.get('*', function(req, res){
   res.sendFile(__dirname + '/views/404.html');
 });
 
+app.use(function(error, req, res, next) {
+  res.sendFile(__dirname + '/views/500.html');
+});
+
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
