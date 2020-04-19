@@ -15,4 +15,3 @@ Our Developer website will be here soon. We are currently working on documentati
 
 - ScriptingToSaveLives.com (COVID-19 Charity)
 - DHHS News (News Website)
-  - dhhsnews.riverside.rocks
