@@ -1,11 +1,19 @@
 var express = require("express");
 var app = express();
+const targetBaseUrl = '/error/404';
+
 
 // we've started you off with Express,
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
+
+function handleRedirect(req, res) {
+  const targetUrl = targetBaseUrl + req.originalUrl;
+  res.redirect(targetUrl);
+}
+
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(request, response) {
@@ -60,16 +68,24 @@ app.get("/views", function(request, response) {
   response.sendFile(__dirname + "/views/404.html");
 });
 
+app.get("/error/404", function(request, response) {
+  response.sendFile(__dirname + "/views/404.html");
+});
+
+app.get("/error/500", function(request, response) {
+  response.sendFile(__dirname + "/views/500.html");
+});
+
 app.get("/chat", function(request, response) {
   response.sendFile(__dirname + "/chat.html");
 });
 
 app.get("*", function(req, res) {
-  res.sendFile(__dirname + "/views/404.html");
+  res.redirect('/error/404');
 });
 
 app.use(function(error, req, res, next) {
-  res.sendFile(__dirname + "/views/500.html");
+  res.redirect('/error/500');
 });
 
 // listen for requests :)
