@@ -1,7 +1,7 @@
 # Riverside Rocks: The website
 
 This is the website of Riverside Rocks.
-You can view this project live at [riverside.rocks](https://riverside.rocks).
+You can view this project live at [riverside.rocks](https://riverside.rocks). Install by cloning or using `installer.sh`.
 
 # How to Contribute
 
