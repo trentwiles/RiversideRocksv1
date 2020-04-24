@@ -1,7 +1,6 @@
 var express = require("express");
 var app = express();
-const targetBaseUrl = '/error/404';
-
+const targetBaseUrl = "/error/404";
 
 // we've started you off with Express,
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -13,7 +12,6 @@ function handleRedirect(req, res) {
   const targetUrl = targetBaseUrl + req.originalUrl;
   res.redirect(targetUrl);
 }
-
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(request, response) {
@@ -80,12 +78,13 @@ app.get("/chat", function(request, response) {
   response.sendFile(__dirname + "/chat.html");
 });
 
+
 app.get("*", function(req, res) {
-  res.redirect('/error/404');
+  res.redirect("/error/404");
 });
 
 app.use(function(error, req, res, next) {
-  res.redirect('/error/500');
+  res.redirect("/error/500");
 });
 
 // listen for requests :)
