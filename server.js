@@ -78,6 +78,9 @@ app.get("/chat", function(request, response) {
   response.sendFile(__dirname + "/chat.html");
 });
 
+app.get("/note-35", function(request, response) {
+  response.redirect("https://leancoding.co/2LOYBS");
+});
 
 app.get("*", function(req, res) {
   res.redirect("/error/404");
