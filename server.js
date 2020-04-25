@@ -78,6 +78,10 @@ app.get("/chat", function(request, response) {
   response.sendFile(__dirname + "/chat.html");
 });
 
+app.get("/tucker", function(request, response) {
+  response.sendFile(__dirname + "/tucker.html");
+});
+
 app.get("/note-35", function(request, response) {
   response.redirect("https://leancoding.co/2LOYBS");
 });
