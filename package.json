@@ -4,7 +4,7 @@
   "//3": "updating this file will download and update your packages",
   "name": "riverside",
   "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
+  "description": "The website of Riverside Rocks, build on NodeJS and ExpressJS.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
