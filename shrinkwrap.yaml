@@ -1,5 +1,6 @@
 dependencies:
   express: 4.17.1
+  express-ipfilter: 1.1.2
 packages:
   /accepts/1.3.7:
     dependencies:
@@ -97,6 +98,17 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+  /express-ipfilter/1.1.2:
+    dependencies:
+      ip: 1.1.5
+      lodash: 4.17.15
+      proxy-addr: 2.0.6
+      range_check: 1.4.0
+    dev: false
+    engines:
+      node: '>=8.9.0'
+    resolution:
+      integrity: sha512-dm1G3sVxlSbcOWSxfUTCo20ySyNQXJ4hJD5fuQJFoZlhkQvpbuDGBlh8AbFm1GwX85EWvfyhekOkvcydaXkBkg==
   /express/4.17.1:
     dependencies:
       accepts: 1.3.7
@@ -200,12 +212,30 @@ packages:
     dev: false
     resolution:
       integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+  /ip/1.1.5:
+    dev: false
+    resolution:
+      integrity: sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=
+  /ip6/0.0.4:
+    dev: false
+    resolution:
+      integrity: sha1-RMWp23njnUBSAbTXjROzhw5I2zE=
+  /ipaddr.js/1.2.0:
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha1-irpJyRknmVhb3WQ+DMtQ6K53e6Q=
   /ipaddr.js/1.9.1:
     dev: false
     engines:
       node: '>= 0.10'
     resolution:
       integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
+  /lodash/4.17.15:
+    dev: false
+    resolution:
+      integrity: sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
   /media-typer/0.3.0:
     dev: false
     engines:
@@ -296,6 +326,13 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
+  /range_check/1.4.0:
+    dependencies:
+      ip6: 0.0.4
+      ipaddr.js: 1.2.0
+    dev: false
+    resolution:
+      integrity: sha1-zYfHrGLEC6nfabhwPGBPYMN0hjU=
   /raw-body/2.4.0:
     dependencies:
       bytes: 3.1.0
@@ -394,3 +431,4 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   express: ^4.16.4
+  express-ipfilter: ^1.1.2

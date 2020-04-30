@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 const targetBaseUrl = "/error/404";
+const ipfilter = require('express-ipfilter').IpFilter
 
 // we've started you off with Express,
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -12,6 +13,9 @@ function handleRedirect(req, res) {
   const targetUrl = targetBaseUrl + req.originalUrl;
   res.redirect(targetUrl);
 }
+
+const ips = ['73.238.171.94'];
+
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(request, response) {
@@ -66,7 +70,7 @@ app.get("/views", function(request, response) {
   response.sendFile(__dirname + "/views/404.html");
 });
 
-app.get("/error/404", function(request, response) {
+app.get("/request-error", function(request, response) {
   response.sendFile(__dirname + "/views/404.html");
 });
 
@@ -87,12 +91,30 @@ app.get("/note-35", function(request, response) {
 });
 
 app.get("*", function(req, res) {
-  res.redirect("/error/404");
+  res.redirect("/request-error?code=404");
 });
 
 app.use(function(error, req, res, next) {
   res.redirect("/error/500");
 });
+
+app.use(ipfilter(ips));
+
+if (app.get('env') === 'development') {
+  app.use((err, req, res, _next) => {
+    console.log('Error handler', err)
+    if (err instanceof IpDeniedError) {
+      res.status(401)
+    } else {
+      res.status(err.status || 500)
+    }
+ 
+    res.render('error', {
+      message: 'You shall not pass',
+      error: err
+    })
+  })
+}
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function() {
