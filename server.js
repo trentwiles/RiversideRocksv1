@@ -8,13 +8,15 @@ const ipfilter = require('express-ipfilter').IpFilter
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
+app.use(express.static("assets"));
+
 
 function handleRedirect(req, res) {
   const targetUrl = targetBaseUrl + req.originalUrl;
   res.redirect(targetUrl);
 }
 
-const ips = ['73.238.171.94'];
+const ips = ['123.123.123'];
 
 
 // http://expressjs.com/en/starter/basic-routing.html
@@ -54,6 +56,10 @@ app.get("/blog/recent-update", function(request, response) {
   response.sendFile(__dirname + "/blog/trick-friends/index.html");
 });
 
+app.get("/devs/projects", function(request, response) {
+  response.sendFile(__dirname + "/projects.html");
+});
+
 app.get("/connect", function(request, response) {
   response.sendFile(__dirname + "/connect/index.html");
 });
@@ -64,6 +70,18 @@ app.get("/custom-post", function(request, response) {
 
 app.get("/license", function(request, response) {
   response.sendFile(__dirname + "/license/index.html");
+});
+
+app.get("/assets/pdf/tucker.pdf", function(request, response) {
+  response.sendFile(__dirname + "/assets/pdf/tucker.pdf");
+});
+
+app.get("/assets/pdf/fuzzonian-military.pdf", function(request, response) {
+  response.sendFile(__dirname + "/assets/pdf/fuzzonian-military.pdf");
+});
+
+app.get("/assets/pdf/wanted.pdf", function(request, response) {
+  response.sendFile(__dirname + "/assets/pdf/wanted.pdf");
 });
 
 app.get("/views", function(request, response) {
